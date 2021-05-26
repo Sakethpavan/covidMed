@@ -106,4 +106,4 @@ console.log("Script Loaded")
 findToday();
 hit()
 setInterval(findToday,1000*60*3);
-setInterval(hit,1000*60*5);
+setInterval(hit,1000*60*3);
