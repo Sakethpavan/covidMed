@@ -20,7 +20,7 @@ var result=""
 function getVaccines(district_id,req){
     
     var url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id="+district_id +"&date="+today;
-
+    console.log(url)
     req.open("GET",url)
 
     req.send();
@@ -29,7 +29,7 @@ function getVaccines(district_id,req){
         if(req.status==200){
             var res = JSON.parse(req.response);
             var totalCenters = res.centers.length;
-
+            console.log(res)
             var centers = res.centers;
             result="";
             for(var i=0;i<totalCenters;i++){
